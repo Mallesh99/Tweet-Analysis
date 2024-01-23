@@ -121,7 +121,7 @@ class _MainPageState extends State<MainPage> {
 
     try {
       final response = await http.get(Uri.parse(
-          "https://719b-2405-201-c00e-60b7-f540-6d3-64c7-d709.ngrok-free.app/?query=$inputText"));
+          "https://248d-2409-408c-109c-7c2f-293c-7803-992f-3325.ngrok-free.app/?query=$inputText"));
 
       if (response.statusCode == 200) {
         final decoded = jsonDecode(response.body);
@@ -165,15 +165,10 @@ class ResultDisplay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Color textColor;
-
     if (resultColor == "neutral") {
-      textColor = Colors.black; // Change text color to black for neutral
+// Change text color to black for neutral
     } else if (resultColor == "positive") {
-      textColor = Colors.green;
-    } else {
-      textColor = Colors.red;
-    }
+    } else {}
 
     return Card(
       elevation: 4,
