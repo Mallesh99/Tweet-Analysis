@@ -7,7 +7,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  static const String title = 'Tweet Analyzer';
+  static const String title = 'Tweet Anal';
 
   // Define a custom MaterialColor
   static const MaterialColor customBlack = MaterialColor(
@@ -87,7 +87,6 @@ class _MainPageState extends State<MainPage> {
                           predict();
                           FocusScope.of(context).unfocus();
                         },
-                  child: Text(isLoading ? 'Processing...' : 'Predict'),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 9, 20, 9),
                     textStyle: const TextStyle(
@@ -95,6 +94,7 @@ class _MainPageState extends State<MainPage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  child: Text(isLoading ? 'Processing...' : 'Predict'),
                 ),
               ),
               const SizedBox(height: 20),
@@ -121,7 +121,7 @@ class _MainPageState extends State<MainPage> {
 
     try {
       final response = await http.get(Uri.parse(
-          "https://248d-2409-408c-109c-7c2f-293c-7803-992f-3325.ngrok-free.app/?query=$inputText"));
+          "https://daf9-49-204-5-98.ngrok-free.app/?query=$inputText"));
 
       if (response.statusCode == 200) {
         final decoded = jsonDecode(response.body);
